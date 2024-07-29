@@ -1,20 +1,25 @@
-const imail2 = document.getElementById("email")
-const pass2 = document.getElementById("pass2")
-const iniciar = document.getElementById("iniciar")
+const correo = document.getElementById("correo");
+const pass = document.getElementById("pass");
+const iniciar = document.getElementById("iniciar");
 
 
 
-lista = JSON.parse(localStorage.getItem("listaUsuarios"))
+const listaUsuarios = JSON.parse(localStorage.getItem("listaUsuarios"))||[]
 
-for (let index = 0; index < listaUsuarios.length; index++) {
-    if (listaUsuarios[index]. email === email.value === pass2 === pass2.value ) {
-         alert("Si puedes entrar al sistema")
+iniciar.addEventListener("click", function () {
 
+    for (let index = 0; index < listaUsuarios.length; index++) {
+        if (listaUsuarios[index]. email === email.value === pass === pass.value ) {
+             alert("Si puedes entrar al sistema")
+    
+            
+        }else{
+            alert("No puedes entrar al sistema")
+        }
+         
         
-    }else{
-        alert("No puedes entrar al sistema")
+        
     }
-     
     
-    
-}
+});
+
