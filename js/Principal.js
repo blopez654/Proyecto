@@ -1,46 +1,40 @@
 const fecha = document.getElementById("fecha");
 
-const evento = document.getElementById("evento");
-
-const tarea = document.getElementById("tarea");
+const actividad = document.getElementById("actividad");
 const guardar = document.getElementById("guardar");
 
 
-
-
-guardar.addEventListener("click", function () {
-
-     const etiquetaP = document.createElement("p")
-
-     etiquetaP.innerHTML = tarea.value
-     
-     cajaTarea.appendChild(etiquetaP)
-     
-      
-     const btn =document.createElement("button")
-     btn.innerHTML = "Eliminar"
-     cajaTarea.appendChild(btn)
+guardar.addEventListener("click",function () {
     
+  const etiquetaP = document.createElement("p")
+  etiquetaP.innerHTML = actividad.value
 
-     const btn2 = document.createElement("button")
-     btn2.innerHTML="Editar"
-     cajaTarea.appendChild(btn2)
-     
-    
-     btn.addEventListener("click", function () {
-     cajaTarea.removeChild(btn)
-     cajaTarea.removeChild(etiquetaP)
-     cajaTarea.removeChild(btn2)
-    
-     })  
+  cajaTarea.appendChild(etiquetaP)
 
- btn2.addEventListener("click",function () {
+   
+  const btn =document.createElement("button")
+  btn.innerHTML = "Eliminar"
+  cajaTarea.appendChild(btn)
+
+ btn.addEventListener("click",function () {
+    cajaTarea.removeChild(btn) 
+    cajaTarea.removeChild(etiquetaP)
+    cajaTarea.removeChild(botonEdit)
+
+})
+  const botonEdit = document.createElement("button")
+ botonEdit.innerHTML = "Editar"
+ cajaTarea.appendChild(botonE)
+
+ botonEdit.addEventListener("click",function () {
     const Editar = document.createElement("input")
     Editar.value.innerHTML = etiquetaP
     cajaTarea.appendChild(Editar)
-    
+
 })
 
 
-});
+
+
+})
 

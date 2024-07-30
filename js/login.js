@@ -20,6 +20,6 @@ iniciar.addEventListener("click", function () {
         
         
     }
-    
+    console.log(listaUsuarios)
 });
 

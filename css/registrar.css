@@ -9,7 +9,7 @@
  .contenedorP{
   margin-left: 5px;
   text-align: center;
-  box-shadow: 0px 0px 5px 5px;
+ 
   width: 1500px;
   height: 550px;
 
@@ -34,7 +34,7 @@
  box-shadow: 0px 0px 5px 5px;
  width: 200px;
  height: 200px;
-
+border-radius: 4%;
 }
 
 .ema1{
