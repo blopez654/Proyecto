@@ -9,7 +9,7 @@ const listaUsuarios = JSON.parse(localStorage.getItem("listaUsuarios"))||[]
 iniciar.addEventListener("click", function () {
 
     for (let index = 0; index < listaUsuarios.length; index++) {
-        if (listaUsuarios[index]. email === email.value === pass === pass.value ) {
+        if (listaUsuarios[index]. email === email.value && listaUsuarios[index].pass === pass.value ) {
              alert("Si puedes entrar al sistema")
     
             

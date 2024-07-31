@@ -4,11 +4,9 @@ const pass = document.getElementById("pass");
 const regist = document.getElementById("regist");
 
 
- const listaUsuarios = listaUsuarios = JSON.parse(localStorage.getItem("listaUsuarios"))||[]
+ 
 
-  listaUsuarios = JSON.parse(localStorage.getItem("listaUsuarios"))||[]
-
-
+   const listaUsuarios = JSON.parse(localStorage.getItem("listaUsuarios"))||[]
  
 regist.addEventListener("click", function () { 
 
@@ -16,10 +14,11 @@ regist.addEventListener("click", function () {
         nombre:nombre.value,
         email:email.value,
         pass:pass.value
-}
-     lista.push(listaUsuarios)
- 
- console.log(listaUsuarios)
- lista = JSON.parse(localStorage.setItem("listaUsuarios"))
+    }
+     
+ localStorage.setItem("PersonaRegistrada", JSON.stringify(listaUsuarios))
+ lista.push(listaUsuarios)
+
+ window.location="http://127.0.0.1:5500/Proyecto/login.html"
 
 })
