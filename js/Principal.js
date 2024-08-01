@@ -3,15 +3,21 @@ const seleccion = document.getElementById("seleccion");
 const actividad = document.getElementById("actividad");
 const guardar = document.getElementById("guardar");
 
- let listaTarea = JSON.parse(localStorage.getItem("listaTarea") || [])
+let listaTarea  = JSON.parse(localStorage.getItem("listaTarea"))||[]
+let listaEvento  = JSON.parse(localStorage.getItem("listaEvento"))||[]
 
-let listaEvento = JSON.parse(localStorage.getItem("listaEvento") || [])
 
 
 guardar.addEventListener("click",function () {
-     
-  if (select .value== "Tarea") {
-    const etiquetaP = document.createElement("p")
+
+ 
+  listaTarea.push(fecha.value + " " + actividad.value)
+  localStorage.setItem("listaTarea",JSON.stringify(listaTarea)||[])
+  listaEvento.push(fecha.value + " " + actividad.value)
+  localStorage.setItem("listaEvento",JSON.stringify(listaEvento)||[])
+
+  if (select.value== "Tarea") {
+    const etiquetaP = document.createElement("p") 
 
     
    const divHijo = document.createElement("div")
@@ -25,9 +31,10 @@ guardar.addEventListener("click",function () {
     console.log(cajaTarea)
     btn.addEventListener("click",function () {
     divHijo.remove()
-    
+  
     })
   
+
     const botonEdit = document.createElement("button")
     botonEdit.innerHTML = "Editar"
     divHijo.appendChild(botonEdit)
@@ -56,36 +63,36 @@ guardar.addEventListener("click",function () {
 
     
      const etiqueta2 = document.createElement("p")
-
-     const divHijo2 = document.createElement("div")
+    
+     const div2 = document.createElement("div")
      etiqueta2.innerHTML = actividad.value + " " + fecha.value
-     divHijo2.appendChild(etiqueta2)
-     cajaEvento.appendChild(divHijo2)
+     div2.appendChild(etiqueta2)
+     cajaEvento.appendChild(div2)
  
      const btnEliminar =document.createElement("button")
      btnEliminar.innerHTML = "Eliminar"
-     divHijo2.appendChild(btnEliminar)
+     div2.appendChild(btnEliminar)
      console.log(cajaEvento)
      btnEliminar.addEventListener("click", function () {
-     divHijo2.remove()
+     div2.remove()
      
      })
    
      const botonEdit2 = document.createElement("button")
      botonEdit2.innerHTML = "Editar"
-     divHijo2.appendChild(botonEdit2)
+     div2.appendChild(botonEdit2)
      console.log(cajaEvento)
      botonEdit2.addEventListener("click", function () {
      const Editar = document.createElement("input")  
-     divHijo2.appendChild(Editar)
+     div2.appendChild(Editar)
       Editar.innerHTML = etiqueta2
  
     
       const btnGuardar = document.createElement("button")
      btnGuardar.innerHTML = "Guardar"
-     divHijo2.appendChild(btnGuardar)
+     div2.appendChild(btnGuardar)
      btnGuardar.addEventListener("click", function () {
-     divHijo2.appendChild(btnGuardar)
+     div2.appendChild(btnGuardar)
      })
     btnGuardar.addEventListener("click", function () {
    etiqueta2.innerHTML = Editar.value
@@ -94,9 +101,11 @@ guardar.addEventListener("click",function () {
 
  }
 
- })
+ });
+
+  //localstorage setItem
+
+  
   
 
-
-  
 

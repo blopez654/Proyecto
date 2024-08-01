@@ -1,13 +1,7 @@
- .body{
-    background-image: url(../img/1_UR2_TsOVWlL6eCOuXIUmIg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-attachment: fixed;
- }
-
+ 
  .contenedorP{
-  margin-left: 5px;
+  display: grid;
+  justify-content: center;
   text-align: center;
  
   width: 1500px;
@@ -29,8 +23,10 @@
  }
 
  .contenedor{
- margin-left: 45%;
+ display: grid;
+ justify-content: center;
  text-align: center;
+ margin-left: 35%;
  box-shadow: 0px 0px 5px 5px;
  width: 200px;
  height: 200px;
@@ -50,3 +46,24 @@ border-radius: 4%;
     
 }
 
+@media screen and (max-width: 580px){
+ html{
+    font-size: 11px;
+ }
+.contenedorP{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    width: 1500px;
+    height: 550px;
+}
+.contenedor{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+   
+}
